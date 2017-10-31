@@ -50,7 +50,7 @@ IMAGE_ROOTFS_ALIGNMENT = "4096"
 SDIMG_OTA_ROOTFS_TYPE ?= "otaimg"
 SDIMG_OTA_ROOTFS = "${DEPLOY_DIR_IMAGE}/${IMAGE_LINK_NAME}.${SDIMG_OTA_ROOTFS_TYPE}"
 
-IMAGE_DEPENDS_rpi-sdimg-ota = " \
+do_image_rpi-sdimg-ota[depends] = " \
 			parted-native \
 			mtools-native \
 			dosfstools-native \

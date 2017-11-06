@@ -29,5 +29,7 @@ SOTA_MACHINE_m3ulcb = "m3ulcb"
 SOTA_MACHINE_intel-corei7-64 ?= "minnowboard"
 SOTA_MACHINE_qemux86-64 ?= "qemux86-64"
 SOTA_MACHINE_am335x-evm ?= "am335x-evm-wifi"
+SOTA_MACHINE_imx7d-phyboard-zeta-001 ?= "imx7-phytec-zeta"
+SOTA_MACHINE_imx7d-phyboard-zeta-002 ?= "imx7-phytec-zeta"
 
 inherit sota_${SOTA_MACHINE}

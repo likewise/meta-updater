@@ -13,11 +13,13 @@ HOSTTOOLS_NONFATAL += " repo "
 
 # Write build information to target filesystem
 buildinfo () {
+  # @TODO this test is broken - on Ubuntu repo exists but is not the actual repo command
   if [ $(which repo) ]; then
     repo manifest --revision-as-HEAD -o ${IMAGE_ROOTFS}${sysconfdir}/manifest.xml
   else
-    echo "Android repo tool not food; manifest not copied."
+    echo "Android repo tool not found; manifest not copied."
   fi
 }
 
-IMAGE_PREPROCESS_COMMAND += "buildinfo;"
+# @TODO Disable, see for brokeness above
+#IMAGE_PREPROCESS_COMMAND += "buildinfo;"

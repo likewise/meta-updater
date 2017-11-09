@@ -17,4 +17,6 @@ do_install() {
 
 inherit allarch
 
+ERROR_QA_remove = "usrmerge"
+
 FILES_${PN} += " /dev /etc/initrd-release /sbin/init "

@@ -1,8 +1,8 @@
 #IMAGE_CLASSES += "${@bb.utils.contains('DISTRO_FEATURES', 'sota', 'image_types_uboot', '', d)}"
 #IMAGE_FSTYPES += "${@bb.utils.contains('DISTRO_FEATURES', 'sota', 'rpi-sdimg-ota.xz', 'rpi-sdimg.xz', d)}"
 
-# Undo part of sota.bbclass again
-IMAGE_FSTYPES_remove = "${@bb.utils.contains('DISTRO_FEATURES', 'sota', 'ostreepush wic', '', d)}"
+# Undo part of sota.bbclass again; keep ostreepush removed
+IMAGE_FSTYPES_remove = "${@bb.utils.contains('DISTRO_FEATURES', 'sota', 'ostreepush', '', d)}"
 
 KERNEL_IMAGETYPE_sota = "uImage"
 

@@ -4,7 +4,7 @@
 # Undo part of sota.bbclass again; keep ostreepush removed
 IMAGE_FSTYPES_remove = "${@bb.utils.contains('DISTRO_FEATURES', 'sota', 'ostreepush', '', d)}"
 
-KERNEL_IMAGETYPE_sota = "uImage"
+#KERNEL_IMAGETYPE_sota = "uImage"
 
 # This is already set elsewhere and does not depend on SOTA
 #PREFERRED_PROVIDER_virtual/bootloader_sota ?= "u-boot-phytec"
